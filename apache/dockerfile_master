@@ -12,7 +12,8 @@ RUN apt update -y && apt install -y \
     ssl-cert \
     libapache2-mod-wsgi-py3 \
     pandoc \
-    texlive-xetex
+    texlive-xetex \
+    python3-distutils
 
 RUN echo "LoadModule wsgi_module /usr/lib/apache2/modules/mod_wsgi.so" >> ${HTTPD_CONF} \
  && echo "IncludeOptional conf.d/*.conf" >> ${HTTPD_CONF}
