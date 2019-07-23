@@ -12,6 +12,7 @@ if [[ $(pip freeze | grep -Poc "^rdmo==") == "0" ]]; then
     pip install psycopg2
 
     pip install rdmo
+    pip install --upgrade djangorestframework==3.9.4
 
     git clone ${RDMO_APP_REPO} ${RDMO_APP}
     cp -f /tmp/template_local.py ${RDMO_APP}/config/settings/local.py
